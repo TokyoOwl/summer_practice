@@ -1,3 +1,3 @@
 namespace utils{
-    void utility_function();
+    int utility_function();
 }
