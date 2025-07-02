@@ -4,20 +4,20 @@
 #include "core.h"
 
 namespace tests{
-    void base_test(){
+    void test_base(){
         assert(core::base_function() == 1);
         std::cout << "Base function tested: OK" << std::endl;
     } 
 
-    void utility_test(){
+    void test_utility(){
         assert(utils::utility_function() == 1);
         std::cout << "Utility function tested: OK" << std::endl;
     } 
 }
 
 int main(){
-    tests::base_test();
-    tests::utility_test();
+    tests::test_base();
+    tests::test_utility();
     std::cin.get();
     return 0;
 }
