@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.26.0)
+"""cmake_minimum_required(VERSION 3.26.0)
 add_executable(tests src/test.cpp)
 target_link_libraries(tests PRIVATE utils core)
 target_include_directories(tests PRIVATE 
@@ -10,4 +10,5 @@ add_custom_command(TARGET tests POST_BUILD
         $<TARGET_FILE:core>
         $<TARGET_FILE:utils>
         $<TARGET_FILE_DIR:tests>
-)
+)"""
+enable_testing()
