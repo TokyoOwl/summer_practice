@@ -12,4 +12,4 @@ add_custom_command(TARGET tests POST_BUILD
         $<TARGET_FILE_DIR:tests>
 )
 enable_testing()
-add_test(NAME tests COMMAND tests)
+add_test(NAME tests COMMAND main)
