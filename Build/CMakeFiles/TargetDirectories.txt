@@ -1,6 +1,0 @@
-D:/Work/C++ projects/summer_practice/Build/CMakeFiles/ALL_BUILD.dir
-D:/Work/C++ projects/summer_practice/Build/CMakeFiles/ZERO_CHECK.dir
-D:/Work/C++ projects/summer_practice/Build/libs/core/CMakeFiles/core.dir
-D:/Work/C++ projects/summer_practice/Build/libs/utils/CMakeFiles/utils.dir
-D:/Work/C++ projects/summer_practice/Build/app/CMakeFiles/MainApp.dir
-D:/Work/C++ projects/summer_practice/Build/tests/CMakeFiles/tests.dir
