@@ -3,6 +3,10 @@ file(GLOB utils_src
     "include/*.h"
     )
 add_library(utils SHARED ${utils_src})
-target_include_directories(utils PUBLIC include)
-target_link_libraries(utils INTERFACE core)
+if(WIN32)
+    target_compile_definitions(core PRIVATE UTILS_EXPORTS)
+endif()
 
+target_include_directories(utils PUBLIC include)
+
+target_link_libraries(utils PUBLIC core)
