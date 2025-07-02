@@ -5,7 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:212 (message)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       The system is: Windows - 10.0.26100 - AMD64
   -
@@ -16,7 +16,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -66,7 +66,6 @@ events:
         - "C:\\Users\\wot29\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\wot29\\AppData\\Local\\Programs\\EmEditor"
         - "C:\\Users\\wot29\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Program Files\\Azure Data Studio\\bin"
         - "C:\\Users\\wot29\\.dotnet\\tools"
         - "C:\\Program Files\\JetBrains\\PyCharm 2024.1\\bin"
         - "C:\\Users\\wot29\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
@@ -83,7 +82,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler:  
@@ -93,7 +92,7 @@ events:
       The output was:
       0
       Версия MSBuild 17.9.5+33de0b227 для .NET Framework
-      Сборка начата 01.07.2025 22:30:32.
+      Сборка начата 02.07.2025 10:20:45.
       
       Проект "D:\\Work\\C++ projects\\summer_practice\\Build\\CMakeFiles\\4.1.0-rc1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" в узле 1 (целевые объекты по умолчанию).
       PrepareForBuild:
@@ -122,7 +121,7 @@ events:
           Предупреждений: 0
           Ошибок: 0
       
-      Прошло времени 00:00:00.52
+      Прошло времени 00:00:00.53
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -139,7 +138,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
     description: "Path to a program."
@@ -231,7 +230,6 @@ events:
         - "C:\\Users\\wot29\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\wot29\\AppData\\Local\\Programs\\EmEditor"
         - "C:\\Users\\wot29\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Program Files\\Azure Data Studio\\bin"
         - "C:\\Users\\wot29\\.dotnet\\tools"
         - "C:\\Program Files\\JetBrains\\PyCharm 2024.1\\bin"
         - "C:\\Users\\wot29\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
@@ -249,7 +247,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
     description: "Path to a program."
@@ -463,7 +461,6 @@ events:
         - "C:\\Users\\wot29\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\wot29\\AppData\\Local\\Programs\\EmEditor"
         - "C:\\Users\\wot29\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Program Files\\Azure Data Studio\\bin"
         - "C:\\Users\\wot29\\.dotnet\\tools"
         - "C:\\Program Files\\JetBrains\\PyCharm 2024.1\\bin"
         - "C:\\Users\\wot29\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
@@ -479,7 +476,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
     description: "Path to a program."
@@ -571,7 +568,6 @@ events:
         - "C:\\Users\\wot29\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\wot29\\AppData\\Local\\Programs\\EmEditor"
         - "C:\\Users\\wot29\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Program Files\\Azure Data Studio\\bin"
         - "C:\\Users\\wot29\\.dotnet\\tools"
         - "C:\\Program Files\\JetBrains\\PyCharm 2024.1\\bin"
         - "C:\\Users\\wot29\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
@@ -587,7 +583,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_MT"
     description: "Path to a program."
@@ -801,7 +797,6 @@ events:
         - "C:\\Users\\wot29\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\wot29\\AppData\\Local\\Programs\\EmEditor"
         - "C:\\Users\\wot29\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Program Files\\Azure Data Studio\\bin"
         - "C:\\Users\\wot29\\.dotnet\\tools"
         - "C:\\Program Files\\JetBrains\\PyCharm 2024.1\\bin"
         - "C:\\Users\\wot29\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
@@ -817,7 +812,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -909,7 +904,6 @@ events:
         - "C:\\Users\\wot29\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\wot29\\AppData\\Local\\Programs\\EmEditor"
         - "C:\\Users\\wot29\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Program Files\\Azure Data Studio\\bin"
         - "C:\\Users\\wot29\\.dotnet\\tools"
         - "C:\\Program Files\\JetBrains\\PyCharm 2024.1\\bin"
         - "C:\\Users\\wot29\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
@@ -928,7 +922,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC.cmake:546 (__windows_compiler_msvc_enable_rc)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC-CXX.cmake:6 (__windows_compiler_msvc)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXInformation.cmake:48 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_RC_COMPILER"
     description: "RC compiler"
@@ -1186,7 +1180,6 @@ events:
         - "C:\\Users\\wot29\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\wot29\\AppData\\Local\\Programs\\EmEditor"
         - "C:\\Users\\wot29\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Program Files\\Azure Data Studio\\bin"
         - "C:\\Users\\wot29\\.dotnet\\tools"
         - "C:\\Program Files\\JetBrains\\PyCharm 2024.1\\bin"
         - "C:\\Users\\wot29\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
@@ -1208,12 +1201,12 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/Work/C++ projects/summer_practice/Build/CMakeFiles/CMakeScratch/TryCompile-hub8zs"
-      binary: "D:/Work/C++ projects/summer_practice/Build/CMakeFiles/CMakeScratch/TryCompile-hub8zs"
+      source: "D:/Work/C++ projects/summer_practice/Build/CMakeFiles/CMakeScratch/TryCompile-e8vhix"
+      binary: "D:/Work/C++ projects/summer_practice/Build/CMakeFiles/CMakeScratch/TryCompile-e8vhix"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
@@ -1223,40 +1216,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Work/C++ projects/summer_practice/Build/CMakeFiles/CMakeScratch/TryCompile-hub8zs'
+        Change Dir: 'D:/Work/C++ projects/summer_practice/Build/CMakeFiles/CMakeScratch/TryCompile-e8vhix'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_235c7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_1d84f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Версия MSBuild 17.9.5+33de0b227 для .NET Framework
-        Сборка начата 01.07.2025 22:30:33.
+        Сборка начата 02.07.2025 10:20:45.
         
-        Проект "D:\\Work\\C++ projects\\summer_practice\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-hub8zs\\cmTC_235c7.vcxproj" в узле 1 (целевые объекты по умолчанию).
+        Проект "D:\\Work\\C++ projects\\summer_practice\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-e8vhix\\cmTC_1d84f.vcxproj" в узле 1 (целевые объекты по умолчанию).
         PrepareForBuild:
-          Создание каталога "cmTC_235c7.dir\\Debug\\".
+          Создание каталога "cmTC_1d84f.dir\\Debug\\".
           Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
-          Создание каталога "D:\\Work\\C++ projects\\summer_practice\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-hub8zs\\Debug\\".
-          Создание каталога "cmTC_235c7.dir\\Debug\\cmTC_235c7.tlog\\".
+          Создание каталога "D:\\Work\\C++ projects\\summer_practice\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-e8vhix\\Debug\\".
+          Создание каталога "cmTC_1d84f.dir\\Debug\\cmTC_1d84f.tlog\\".
         InitializeBuildStatus:
-          Создание "cmTC_235c7.dir\\Debug\\cmTC_235c7.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
-          Обращение к "cmTC_235c7.dir\\Debug\\cmTC_235c7.tlog\\unsuccessfulbuild".
+          Создание "cmTC_1d84f.dir\\Debug\\cmTC_1d84f.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
+          Обращение к "cmTC_1d84f.dir\\Debug\\cmTC_1d84f.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_235c7.dir\\Debug\\\\" /Fd"cmTC_235c7.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_1d84f.dir\\Debug\\\\" /Fd"cmTC_1d84f.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
           Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.39.33521 для x64
           (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_235c7.dir\\Debug\\\\" /Fd"cmTC_235c7.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_1d84f.dir\\Debug\\\\" /Fd"cmTC_1d84f.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\Work\\C++ projects\\summer_practice\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-hub8zs\\Debug\\cmTC_235c7.exe" /INCREMENTAL /ILK:"cmTC_235c7.dir\\Debug\\cmTC_235c7.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Work/C++ projects/summer_practice/Build/CMakeFiles/CMakeScratch/TryCompile-hub8zs/Debug/cmTC_235c7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/Work/C++ projects/summer_practice/Build/CMakeFiles/CMakeScratch/TryCompile-hub8zs/Debug/cmTC_235c7.lib" /MACHINE:X64  /machine:x64 cmTC_235c7.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_235c7.vcxproj -> D:\\Work\\C++ projects\\summer_practice\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-hub8zs\\Debug\\cmTC_235c7.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\Work\\C++ projects\\summer_practice\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-e8vhix\\Debug\\cmTC_1d84f.exe" /INCREMENTAL /ILK:"cmTC_1d84f.dir\\Debug\\cmTC_1d84f.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Work/C++ projects/summer_practice/Build/CMakeFiles/CMakeScratch/TryCompile-e8vhix/Debug/cmTC_1d84f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/Work/C++ projects/summer_practice/Build/CMakeFiles/CMakeScratch/TryCompile-e8vhix/Debug/cmTC_1d84f.lib" /MACHINE:X64  /machine:x64 cmTC_1d84f.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_1d84f.vcxproj -> D:\\Work\\C++ projects\\summer_practice\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-e8vhix\\Debug\\cmTC_1d84f.exe
         FinalizeBuildStatus:
-          Файл "cmTC_235c7.dir\\Debug\\cmTC_235c7.tlog\\unsuccessfulbuild" удаляется.
-          Обращение к "cmTC_235c7.dir\\Debug\\cmTC_235c7.tlog\\cmTC_235c7.lastbuildstate".
-        Сборка проекта "D:\\Work\\C++ projects\\summer_practice\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-hub8zs\\cmTC_235c7.vcxproj" завершена (целевые объекты по умолчанию).
+          Файл "cmTC_1d84f.dir\\Debug\\cmTC_1d84f.tlog\\unsuccessfulbuild" удаляется.
+          Обращение к "cmTC_1d84f.dir\\Debug\\cmTC_1d84f.tlog\\cmTC_1d84f.lastbuildstate".
+        Сборка проекта "D:\\Work\\C++ projects\\summer_practice\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-e8vhix\\cmTC_1d84f.vcxproj" завершена (целевые объекты по умолчанию).
         
         Сборка успешно завершена.
             Предупреждений: 0
             Ошибок: 0
         
-        Прошло времени 00:00:00.48
+        Прошло времени 00:00:00.51
         
       exitCode: 0
   -
@@ -1264,7 +1257,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
@@ -1282,7 +1275,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/bin/HostX64/x64/link.exe" "-v"
       Microsoft (R) Incremental Linker Version 14.39.33521.0

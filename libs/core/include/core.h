@@ -1,3 +1,3 @@
 namespace core{
-    int base_function();
+    int __declspec(dllexport) base_function();
 }

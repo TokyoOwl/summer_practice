@@ -118,23 +118,6 @@
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PreLinkEvent>
-      <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message>Auto build dll exports</Message>
-      <Command>setlocal
-cd "D:\Work\C++ projects\summer_practice\Build\libs\utils"
-if %errorlevel% neq 0 goto :cmEnd
-D:
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E __create_def "D:/Work/C++ projects/summer_practice/Build/libs/utils/utils.dir/Debug/exports.def" "D:/Work/C++ projects/summer_practice/Build/libs/utils/utils.dir/Debug//objects.txt"
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PreLinkEvent>
     <Link>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -145,7 +128,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
       <ImportLibrary>D:/Work/C++ projects/summer_practice/Build/libs/utils/Debug/utils.lib</ImportLibrary>
       <LinkErrorReporting></LinkErrorReporting>
-      <ModuleDefinitionFile>D:/Work/C++ projects/summer_practice/Build/libs/utils/utils.dir/Debug/exports.def</ModuleDefinitionFile>
       <ProgramDataBaseFile>D:/Work/C++ projects/summer_practice/Build/bin/Debug/utils.pdb</ProgramDataBaseFile>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <SubSystem></SubSystem>
@@ -188,23 +170,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PreLinkEvent>
-      <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message>Auto build dll exports</Message>
-      <Command>setlocal
-cd "D:\Work\C++ projects\summer_practice\Build\libs\utils"
-if %errorlevel% neq 0 goto :cmEnd
-D:
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E __create_def "D:/Work/C++ projects/summer_practice/Build/libs/utils/utils.dir/Release/exports.def" "D:/Work/C++ projects/summer_practice/Build/libs/utils/utils.dir/Release//objects.txt"
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PreLinkEvent>
     <Link>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -215,7 +180,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
       <ImportLibrary>D:/Work/C++ projects/summer_practice/Build/libs/utils/Release/utils.lib</ImportLibrary>
       <LinkErrorReporting></LinkErrorReporting>
-      <ModuleDefinitionFile>D:/Work/C++ projects/summer_practice/Build/libs/utils/utils.dir/Release/exports.def</ModuleDefinitionFile>
       <ProgramDataBaseFile>D:/Work/C++ projects/summer_practice/Build/bin/Release/utils.pdb</ProgramDataBaseFile>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <SubSystem></SubSystem>
@@ -258,23 +222,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PreLinkEvent>
-      <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message>Auto build dll exports</Message>
-      <Command>setlocal
-cd "D:\Work\C++ projects\summer_practice\Build\libs\utils"
-if %errorlevel% neq 0 goto :cmEnd
-D:
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E __create_def "D:/Work/C++ projects/summer_practice/Build/libs/utils/utils.dir/MinSizeRel/exports.def" "D:/Work/C++ projects/summer_practice/Build/libs/utils/utils.dir/MinSizeRel//objects.txt"
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PreLinkEvent>
     <Link>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -285,7 +232,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
       <ImportLibrary>D:/Work/C++ projects/summer_practice/Build/libs/utils/MinSizeRel/utils.lib</ImportLibrary>
       <LinkErrorReporting></LinkErrorReporting>
-      <ModuleDefinitionFile>D:/Work/C++ projects/summer_practice/Build/libs/utils/utils.dir/MinSizeRel/exports.def</ModuleDefinitionFile>
       <ProgramDataBaseFile>D:/Work/C++ projects/summer_practice/Build/bin/MinSizeRel/utils.pdb</ProgramDataBaseFile>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <SubSystem></SubSystem>
@@ -327,23 +273,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PreLinkEvent>
-      <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message>Auto build dll exports</Message>
-      <Command>setlocal
-cd "D:\Work\C++ projects\summer_practice\Build\libs\utils"
-if %errorlevel% neq 0 goto :cmEnd
-D:
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E __create_def "D:/Work/C++ projects/summer_practice/Build/libs/utils/utils.dir/RelWithDebInfo/exports.def" "D:/Work/C++ projects/summer_practice/Build/libs/utils/utils.dir/RelWithDebInfo//objects.txt"
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PreLinkEvent>
     <Link>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -354,7 +283,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
       <ImportLibrary>D:/Work/C++ projects/summer_practice/Build/libs/utils/RelWithDebInfo/utils.lib</ImportLibrary>
       <LinkErrorReporting></LinkErrorReporting>
-      <ModuleDefinitionFile>D:/Work/C++ projects/summer_practice/Build/libs/utils/utils.dir/RelWithDebInfo/exports.def</ModuleDefinitionFile>
       <ProgramDataBaseFile>D:/Work/C++ projects/summer_practice/Build/bin/RelWithDebInfo/utils.pdb</ProgramDataBaseFile>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <SubSystem></SubSystem>
@@ -421,8 +349,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\Work\C++ projects\summer_practice\libs\utils\src\utils.cpp" />
     <ClInclude Include="D:\Work\C++ projects\summer_practice\libs\utils\include\utils.h" />
+    <ClCompile Include="D:\Work\C++ projects\summer_practice\libs\utils\src\utils.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

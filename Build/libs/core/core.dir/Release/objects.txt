@@ -1,1 +1,0 @@
-D:/Work/C++ projects/summer_practice/Build/libs/core/core.dir/Release/core.obj

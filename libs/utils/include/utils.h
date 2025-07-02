@@ -1,3 +1,3 @@
 namespace utils{
-    int utility_function();
+    int __declspec(dllexport) utility_function();
 }
