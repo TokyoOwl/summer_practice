@@ -10,5 +10,5 @@
 #endif
 
 namespace utils{
-    UTILS_API int utility_function();
+    UTILS_API std::string utility_function();
 }
