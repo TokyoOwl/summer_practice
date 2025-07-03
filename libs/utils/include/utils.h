@@ -7,7 +7,7 @@
     #endif
 #else
     #ifdef __GNUC__
-        #define UTILS_API __attribute__(visibility("default"))
+        #define UTILS_API __attribute__((visibility("default")))
     #else
         #define UTILS_API // Пустое для остальных
     #endif
