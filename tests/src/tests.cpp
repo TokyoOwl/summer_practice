@@ -5,13 +5,13 @@
 
 namespace tests{
     void test_base(){
-        core::base_function();
+        std::cout << core::base_function();
         assert(core::base_function() == "This is a base function!\n");
         std::cout << "Base function tested: OK" << std::endl;
     } 
 
     void test_utility(){
-        utils::utility_function();
+        std::cout << utils::utility_function();
         std::string str1 = "This is an utility function, that calls base_function(): ";
         std::string str2 = "This is a base function!\n";
         std::string test_str = str1 + str2;
