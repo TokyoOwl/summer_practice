@@ -6,11 +6,7 @@
         #define UTILS_API __declspec(dllimport)
     #endif
 #else
-    #ifdef __GNUC__
-        #define UTILS_API __attribute__((visibility("default")))
-    #else
-        #define UTILS_API // Пустое для остальных
-    #endif
+     #define UTILS_API __attribute__((visibility("default")))
 #endif
 
 namespace utils{

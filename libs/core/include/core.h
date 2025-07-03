@@ -6,11 +6,7 @@
         #define CORE_API __declspec(dllimport)
     #endif
 #else
-    #ifdef __GNUC__
-        #define CORE_API __attribute__((visibility("default")))
-    #else
-        #define CORE_API // Пустое для остальных
-    #endif
+    #define CORE_API __attribute__((visibility("default")))
 #endif
 
 namespace core{
