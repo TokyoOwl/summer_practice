@@ -1,4 +1,3 @@
-#pragma once
 #include <iostream>
 #include "core.h"
 namespace core{
