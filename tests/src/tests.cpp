@@ -1,28 +1,39 @@
 #include <iostream>
 #include <cassert>
+#include <gtest/gtest.h>
+#include "test_cout.h"
 #include "utils.h"
 #include "core.h"
 
-namespace tests{
+/*namespace tests{
     void test_base(){
         std::cout << core::base_function();
-        assert(core::base_function() == "This is a base function!\n");
-        std::cout << "Base function tested: OK" << std::endl;
+        std::string str = "This is a base function!\n";
+        assert(core::base_function() == str);
     } 
 
     void test_utility(){
         std::cout << utils::utility_function();
-        std::string str1 = "This is an utility function, that calls base_function(): ";
-        std::string str2 = "This is a base function!\n";
-        std::string test_str = str1 + str2;
-        assert(utils::utility_function() == test_str);
-        std::cout << "Utility function tested: OK" << std::endl;
-    } 
+        std::string str = "This is an utility function, that calls base_function(): This is a base function!\n";
+        assert(utils::utility_function() == str);
+    }
+}*/
+TEST(func_test, base_test)
+{
+    TEST_COUT << core::base_function();
+    std::string str = "This is a base function!\n";
+    EXPECT_EQ(str, core::base_function());
+
+}
+TEST(func_test, utils_test)
+{   
+    TEST_COUT << utils::utility_function();
+    std::string str = "This is an utility function, that calls base_function(): This is a base function!\n";
+    EXPECT_EQ(str, utils::utility_function());
 }
 
 int main(){
-    tests::test_base();
-    tests::test_utility();
-    std::cin.get();
-    return 0;
+
+    ::testing::InitGoogleTest();
+    return RUN_ALL_TESTS();
 }
