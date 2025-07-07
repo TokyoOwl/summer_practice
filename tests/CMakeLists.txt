@@ -20,6 +20,9 @@ add_custom_command(TARGET tests POST_BUILD
 )   
 #add_test(NAME tests COMMAND tests)
 include(GoogleTest)
-gtest_discover_tests(tests
-                     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/bin                   
-)
+try_compile(GTEST_DISCOVER_WORKS ${CMAKE_BINARY_DIR} SOURCES ${CMAKE_SOURCE_DIR}/tests/CMakeLists.txt)
+if(GTEST_DISCOVER_WORKS)
+    gtest_discover_tests(tests)
+else()
+    gtest_add_tests(TARGET tests)
+endif()
