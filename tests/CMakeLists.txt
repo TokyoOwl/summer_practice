@@ -7,7 +7,7 @@ include(FetchContent)
 FetchContent_Declare(
     googletest
     GIT_REPOSITORY https://github.com/google/googletest.git
-    GIT_TAG release-1.14.0  # Последняя стабильная версия
+    GIT_TAG v1.14.0  # Последняя стабильная версия
 )
 FetchContent_MakeAvailable(googletest)
 target_include_directories(tests PUBLIC include)
