@@ -12,3 +12,10 @@ add_custom_command(TARGET tests POST_BUILD
         $<TARGET_FILE_DIR:tests>
 )   
 add_test(NAME tests COMMAND tests)
+include(GoogleTest)
+gtest_add_tests(TARGET tests
+                TEST_SUFFIX .noArgs
+                TEST_LIST noArgsTests
+)
+
+gtest_discover_tests(tests)
