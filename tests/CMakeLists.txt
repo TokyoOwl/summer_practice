@@ -20,5 +20,4 @@ add_custom_command(TARGET tests POST_BUILD
 )   
 #add_test(NAME tests COMMAND tests)
 include(GoogleTest)
-gtest_add_tests(TARGET      tests
-)
+gtest_discover_tests(tests)
