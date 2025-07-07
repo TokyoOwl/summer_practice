@@ -20,7 +20,7 @@ add_custom_command(TARGET tests POST_BUILD
 )   
 #add_test(NAME tests COMMAND tests)
 include(GoogleTest)
-gtest_add_tests(TARGET      FooTest
+gtest_add_tests(TARGET      tests
                 TEST_SUFFIX .noArgs
                 TEST_LIST   noArgsTests
 )
