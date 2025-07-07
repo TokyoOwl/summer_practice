@@ -1,17 +1,21 @@
 cmake_minimum_required(VERSION 3.26.0)
 enable_testing()
 add_executable(tests src/tests.cpp)
-add_subdirectory(
-    ${CMAKE_SOURCE_DIR}/extern/googletest
-    ${CMAKE_BINARY_DIR}/googletest-build
+include(FetchContent)
+
+# Настраиваем Google Test
+FetchContent_Declare(
+    googletest
+    GIT_REPOSITORY https://github.com/google/googletest.git
+    GIT_TAG release-1.14.0  # Последняя стабильная версия
 )
+FetchContent_MakeAvailable(googletest)
 target_include_directories(tests PUBLIC include)
 target_include_directories(tests PRIVATE 
     ${CMAKE_SOURCE_DIR}/libs/core/include
     ${CMAKE_SOURCE_DIR}/libs/utils/include
-    ${CMAKE_SOURCE_DIR}/extern/googletest/googletest/include
 )
-target_link_libraries(tests PRIVATE utils core gtest gtest_main)
+target_link_libraries(tests PRIVATE utils core GTest::gtest_main)
 add_custom_command(TARGET tests POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
         $<TARGET_FILE:core>
@@ -20,9 +24,5 @@ add_custom_command(TARGET tests POST_BUILD
 )   
 #add_test(NAME tests COMMAND tests)
 include(GoogleTest)
-try_compile(GTEST_DISCOVER_WORKS ${CMAKE_BINARY_DIR} SOURCES ${CMAKE_SOURCE_DIR}/tests/CMakeLists.txt)
-if(GTEST_DISCOVER_WORKS)
-    gtest_discover_tests(tests)
-else()
-    gtest_add_tests(TARGET tests)
-endif()
+gtest_discover_tests(tests)
+
