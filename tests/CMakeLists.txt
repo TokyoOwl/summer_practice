@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.26.0)
+enable_testing()
 add_executable(tests src/tests.cpp)
 add_subdirectory(
     ${CMAKE_SOURCE_DIR}/extern/googletest
