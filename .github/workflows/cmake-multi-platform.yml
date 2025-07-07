@@ -69,13 +69,7 @@ jobs:
     - name: Build
       # Build your program with the given configuration. Note that --config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
       run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }}
-    - name: List artifacts
-      run: ls -la ${{ github.workspace }}/Build/bin/
-    - name: Manual test run
-      run: |
-        cd ${{ github.workspace }}/Build
-        ./bin/tests --gtest_list_tests
-        ./bin/tests --gtest_filter=func_test.*
+
     - name: Test
       run: ctest --test-dir ${{ steps.strings.outputs.build-output-dir }} --verbose -C ${{ matrix.build_type }}
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
