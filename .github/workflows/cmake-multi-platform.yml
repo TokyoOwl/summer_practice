@@ -70,7 +70,7 @@ jobs:
       # Build your program with the given configuration. Note that --config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
       run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }}
     - name: Install
-      run: cmake --install ./Build --config Debug --prefix "./"
+      run: cmake --install ./Build --config Debug --prefix "./Build/installdir"
     - name: Test
       run: ctest --test-dir ${{ steps.strings.outputs.build-output-dir }} --verbose -C ${{ matrix.build_type }}
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
