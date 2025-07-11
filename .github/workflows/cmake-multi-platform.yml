@@ -72,5 +72,8 @@ jobs:
     - name: Install
       run: cmake --install ./Build --config Release --prefix "./Build/installdir"
     - name: Test
-      run: ctest --test-dir ${{ steps.strings.outputs.build-output-dir }}/installdir/bin --verbose -C ${{ matrix.build_type }}
+      run: |
+          export LD_LIBRARY_PATH=${{ github.workspace }}/Build/installdir/bin:$LD_LIBRARY_PATH
+          export PATH=${{ github.workspace }}/Build/installdir/bin:$PATH
+          ctest --verbose -C ${{ matrix.build_type }}
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
