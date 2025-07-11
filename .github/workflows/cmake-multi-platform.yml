@@ -72,5 +72,5 @@ jobs:
     - name: Install
       run: cmake --install ./Build --config Debug --prefix "./Build/installdir"
     - name: Test
-      run: ctest --test-dir ${{ steps.strings.outputs.build-output-dir }} --verbose -C ${{ matrix.build_type }}
+      run: ctest --test-dir ${{ steps.strings.outputs.build-output-dir }}/installdir/bin --verbose -C ${{ matrix.build_type }}
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
