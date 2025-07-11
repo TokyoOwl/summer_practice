@@ -73,7 +73,11 @@ jobs:
       run: cmake --install ./Build --config Release --prefix "./Build/installdir"
     - name: Test
       run: |
-          export LD_LIBRARY_PATH=${{ github.workspace }}/Build/installdir/bin:$LD_LIBRARY_PATH
-          export PATH=${{ github.workspace }}/Build/installdir/bin:$PATH
-          ctest --verbose -C ${{ matrix.build_type }}
+          if ($IsWindows) {
+            $env:PATH = "${{ github.workspace }}\Build\installdir\bin;" + $env:PATH
+            ctest -C ${{ matrix.build_type }} --verbose
+          } else {
+            export LD_LIBRARY_PATH="${{ github.workspace }}/Build/installdir/bin:$LD_LIBRARY_PATH"
+            ctest -C ${{ matrix.build_type }} --verbose
+          }
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
