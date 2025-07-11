@@ -17,3 +17,7 @@ TEST(func_test, utils_test)
     std::string str = "This is an utility function, that calls base_function(): This is a base function!\n";
     EXPECT_EQ(str, utils::utility_function());
 }
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
