@@ -5,9 +5,4 @@ target_include_directories(MainApp PRIVATE
     ${CMAKE_SOURCE_DIR}/libs/core/include
     ${CMAKE_SOURCE_DIR}/libs/utils/include
 )
-add_custom_command(TARGET MainApp POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        $<TARGET_FILE:core>
-        $<TARGET_FILE:utils>
-        $<TARGET_FILE_DIR:MainApp>
-)
+install(TARGETS MainApp RUNTIME DESTINATION ${bin_path}) 

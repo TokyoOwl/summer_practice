@@ -10,19 +10,15 @@ FetchContent_Declare(
     GIT_TAG v1.14.0  # Последняя стабильная версия
 )
 FetchContent_MakeAvailable(googletest)
-target_include_directories(tests PUBLIC include)
 target_include_directories(tests PRIVATE 
     ${CMAKE_SOURCE_DIR}/libs/core/include
     ${CMAKE_SOURCE_DIR}/libs/utils/include
 )
 target_link_libraries(tests PRIVATE utils core GTest::gtest_main)
-add_custom_command(TARGET tests POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        $<TARGET_FILE:core>
-        $<TARGET_FILE:utils>
-        $<TARGET_FILE_DIR:tests>
-)   
-#add_test(NAME tests COMMAND tests)
+install(TARGETS tests RUNTIME DESTINATION ${bin_path}) 
+install(TARGETS utils core
+    RUNTIME DESTINATION ${bin_path}
+)
 include(GoogleTest)
-gtest_discover_tests(tests)
+gtest_discover_tests(tests DISCOVERY_MODE PRE_TEST)
 
