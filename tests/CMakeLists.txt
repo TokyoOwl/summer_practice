@@ -15,7 +15,7 @@ target_include_directories(tests PRIVATE
     ${CMAKE_SOURCE_DIR}/libs/utils/include
 )
 include(GoogleTest)
-gtest_add_tests(tests "" AUTO)
+gtest_discover_tests(tests DISCOVERY_MODE PRE_TEST)
 target_link_libraries(tests PRIVATE utils core GTest::gtest_main)
 install(TARGETS tests RUNTIME DESTINATION ${bin_path}) 
 install(TARGETS utils core
