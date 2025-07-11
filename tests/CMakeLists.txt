@@ -20,5 +20,5 @@ install(TARGETS utils core
     RUNTIME DESTINATION ${bin_path}
 )
 include(GoogleTest)
-gtest_discover_tests(tests DISCOVERY_MODE PRE_TEST)
+gtest_add_tests(tests)
 
