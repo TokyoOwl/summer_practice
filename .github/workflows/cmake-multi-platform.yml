@@ -71,13 +71,18 @@ jobs:
       run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }}
     - name: Install
       run: cmake --install ./Build --config Release --prefix "./Build/installdir"
-    - name: Test
-      run: |
-          if ($IsWindows) {
-            $env:PATH = "${{ github.workspace }}\Build\installdir\bin;" + $env:PATH
-            ctest -C ${{ matrix.build_type }} --verbose
-          } else {
-            export LD_LIBRARY_PATH="${{ github.workspace }}/Build/installdir/bin:$LD_LIBRARY_PATH"
-            ctest -C ${{ matrix.build_type }} --verbose
-          }
+    - name: Test on Windows
+      if: runner.os == 'Windows'
+      shell: pwsh
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
+      run: |
+        $env:PATH = "${{ github.workspace }}\Build\installdir\bin;" + $env:PATH
+        ctest -C ${{ matrix.build_type }} --verbose
+
+    - name: Test on Linux
+      if: runner.os != 'Windows'
+      shell: bash
+      working-directory: ${{ steps.strings.outputs.build-output-dir }}
+      run: |
+        export LD_LIBRARY_PATH="${{ github.workspace }}/Build/installdir/bin:$LD_LIBRARY_PATH"
+        ctest -C ${{ matrix.build_type }} --verbose
