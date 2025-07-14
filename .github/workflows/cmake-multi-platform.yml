@@ -26,7 +26,7 @@ jobs:
             cpp_compiler: cl
           - os: ubuntu-latest
             c_compiler: gcc
-            cpp_compiler: gcc
+            cpp_compiler: g++
         exclude:
           - os: windows-latest
             c_compiler: gcc
