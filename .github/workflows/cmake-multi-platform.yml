@@ -92,7 +92,9 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: binaries-${{ runner.os }}
-        path: ${{ steps.strings.outputs.build-output-dir }}/binaries-${{ runner.os }}.zip
+        path: binaries-${{ runner.os }}.zip
+    - name: List files before release
+      run: ls -R . 
       
   release:
     needs: build
@@ -109,5 +111,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
         files: |
-          artifacts/binaries-ubuntu.zip
-          artifacts/binaries-windows.zip
+          binaries-Ubuntu.zip
+          binaries-Windows.zip
