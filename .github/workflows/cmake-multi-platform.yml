@@ -77,11 +77,17 @@ jobs:
         export LD_LIBRARY_PATH="${{ github.workspace }}/installdir/bin:$LD_LIBRARY_PATH"
         ctest -C ${{ matrix.build_type }} --verbose
     - name: Zip Binaries
-      shell: pwsh
+      if: runner.os != 'Windows'
+      shell: bash
       run: |
         cd ${{ steps.strings.outputs.build-output-dir }}
         zip -r binaries-${{ runner.os }}.zip installdir/bin
-
+    - name: Zip binaries (Windows)
+      if: runner.os == 'Windows'
+      shell: pwsh
+      working-directory: ${{ github.workspace }}
+      run: |
+        Compress-Archive -Path installdir/bin -DestinationPath binaries-Windows.zip
     - name: Artifact
       uses: actions/upload-artifact@v4
       with:
