@@ -77,7 +77,7 @@ jobs:
         export LD_LIBRARY_PATH="${{ github.workspace }}/installdir/bin:$LD_LIBRARY_PATH"
         ctest -C ${{ matrix.build_type }} --verbose
     - name: Zip Binaries
-      shell: bash
+      shell: pwsh
       run: |
         cd ${{ steps.strings.outputs.build-output-dir }}
         zip -r binaries-${{ runner.os }}.zip installdir/bin
