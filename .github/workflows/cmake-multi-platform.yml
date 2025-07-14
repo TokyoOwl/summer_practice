@@ -110,5 +110,5 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         files: |
-          binaries-Ubuntu.zip
-          binaries-Windows.zip
+          /artifacts/binaries-Linux/binaries-Linux.zip
+          /artifacts/binaries-Windows/binaries-Windows.zip
