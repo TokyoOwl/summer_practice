@@ -97,7 +97,8 @@ jobs:
       run: ls -R . 
       
   release:
-    permissions: write
+    permissions:
+      contents: write
     needs: build
     runs-on: ubuntu-latest
     steps:
