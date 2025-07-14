@@ -23,8 +23,10 @@ jobs:
         include:
           - os: windows-latest
             c_compiler: cl
+            cpp_compiler: cl
           - os: ubuntu-latest
             c_compiler: gcc
+            cpp_compiler: gcc
         exclude:
           - os: windows-latest
             c_compiler: gcc
