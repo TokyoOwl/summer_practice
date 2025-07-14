@@ -5,6 +5,8 @@ name: CMake on multiple platforms
 on:
   push:
     branches: [ "main" ]
+    tags:
+      - 'v*'
   pull_request:
     branches: [ "main" ]
 
@@ -86,3 +88,48 @@ jobs:
       run: |
         export LD_LIBRARY_PATH="${{ github.workspace }}/installdir/bin:$LD_LIBRARY_PATH"
         ctest -C ${{ matrix.build_type }} --verbose
+    - name: Zip Bin
+      shell: bash
+      run: |
+        cd ${{ steps.strings.outputs.build-output-dir }}
+        zip -r binaries-${{ runner.os }}.zip installdir
+
+    - name: Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: binaries-${{ runner.os }}
+        path: ${{ steps.strings.outputs.build-output-dir }}/binaries-${{ runner.os }}.zip
+  source-archive:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: 'recursive'
+  
+      - name: Create source archive
+        run: |
+          git archive --format=zip --output=source.zip HEAD
+  
+      - name: Upload Source Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: source
+          path: source.zip
+  
+  release:
+    needs: [build, source-archive]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download all artifacts
+      uses: actions/download-artifact@v4
+      with:
+        path: artifacts
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: |
+          artifacts/source/source.zip
+          artifacts/binaries-ubuntu-latest/binaries-ubuntu-latest.zip
+          artifacts/binaries-windows-latest/binaries-windows-latest.zip
