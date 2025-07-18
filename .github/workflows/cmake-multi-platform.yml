@@ -82,8 +82,8 @@ jobs:
       if: runner.os != 'Windows'
       shell: bash
       run: |
-        cd ${{ steps.strings.outputs.build-output-dir }}
-        zip -r binaries-${{ runner.os }}.zip installdir/*
+        cd ${{ steps.strings.outputs.build-output-dir }}/installdir/
+        zip -r binaries-${{ runner.os }}.zip ./*
         
     - name: Zip binaries (Windows)
       if: runner.os == 'Windows'
