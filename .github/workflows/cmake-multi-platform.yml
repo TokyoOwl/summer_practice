@@ -78,16 +78,24 @@ jobs:
         export LD_LIBRARY_PATH="${{ github.workspace }}/installdir/bin:$LD_LIBRARY_PATH"
         ctest -C ${{ matrix.build_type }} --verbose
         
-    - name: Zip binaries
-      if: startsWith(github.ref, 'refs/tags/')
+    - name: Zip Binaries (Linux)
+      if: runner.os != 'Windows'
       shell: bash
       run: |
-        mkdir -p dist
-        if [[ "${{ runner.os }}" == "Windows" ]]; then
-          7z a "binaries-Windows.zip" "${{ github.workspace }}/installdir/*"
-        else
-          tar -czvf "$binaries-{{ runner.os }}.tar.gz" -C "${{ github.workspace }}/installdir/*" .
-        fi
+        cd ${{ steps.strings.outputs.build-output-dir }}
+        zip -r binaries-${{ runner.os }}.zip installdir/*
+        
+    - name: Zip binaries (Windows)
+      if: runner.os == 'Windows'
+      shell: pwsh
+      working-directory: ${{ github.workspace }}
+      run: |
+        Compress-Archive -Path installdir/* -DestinationPath binaries-windows.zip
+    - name: Artifacts upload
+      uses: actions/upload-artifact@v4
+      with:
+        name: binaries-${{ runner.os }}
+        path: binaries-${{ runner.os }}.zip
     - name: Artifacts upload
       if: startsWith(github.ref, 'refs/tags/')
       uses: actions/upload-artifact@v4
