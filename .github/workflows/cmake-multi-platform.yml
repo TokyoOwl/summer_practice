@@ -66,7 +66,7 @@ jobs:
       shell: pwsh
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
       run: |
-        if ( "${{ runner.os }}" == "Windows" )
+        if ( "${{ runner.os }}" -eq "Windows" )
         {
           $env:PATH = "${{ github.workspace }}\installdir\bin;" + $env:PATH
           ctest -C ${{ matrix.build_type }} --verbose
