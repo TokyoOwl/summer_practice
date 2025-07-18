@@ -63,16 +63,19 @@ jobs:
       run: cmake --install . --config Release --prefix "./installdir"
       
     - name: Test
-      shell: bash
+      shell: pwsh
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
       run: |
-        if [[ "${{ runner.os }}" == "Windows" ]]; then
+        if ( "${{ runner.os }}" == "Windows" )
+        {
           $env:PATH = "${{ github.workspace }}\installdir\bin;" + $env:PATH
           ctest -C ${{ matrix.build_type }} --verbose
+        }
         else
+        {
           export LD_LIBRARY_PATH="${{ github.workspace }}/installdir/bin:$LD_LIBRARY_PATH"
           ctest -C ${{ matrix.build_type }} --verbose
-        fi
+        }
         
     - name: Zip binaries
       if: startsWith(github.ref, 'refs/tags/')
