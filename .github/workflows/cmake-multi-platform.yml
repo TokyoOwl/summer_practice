@@ -5,8 +5,7 @@ name: CMake on multiple platforms
 on:
   push:
     branches: [ "main" ]
-    tags:
-      - 'v*'
+    tags: [ "v*" ]
   pull_request:
     branches: [ "main" ]
 
@@ -81,13 +80,13 @@ jobs:
       shell: bash
       run: |
         cd ${{ steps.strings.outputs.build-output-dir }}
-        zip -r binaries-${{ runner.os }}.zip installdir/bin
+        zip -r binaries-${{ runner.os }}.zip installdir/
     - name: Zip binaries (Windows)
       if: runner.os == 'Windows'
       shell: pwsh
       working-directory: ${{ github.workspace }}
       run: |
-        Compress-Archive -Path installdir/bin -DestinationPath binaries-windows.zip
+        Compress-Archive -Path installdir/ -DestinationPath binaries-windows.zip
     - name: Artifacts upload
       uses: actions/upload-artifact@v4
       with:
@@ -95,6 +94,7 @@ jobs:
         path: binaries-${{ runner.os }}.zip
       
   release:
+    if: startsWith(github.refs, "Release")
     permissions:
       contents: write
     needs: build
